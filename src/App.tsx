@@ -31,7 +31,7 @@ function App() {
     fetcData();
   }, []);
 
-  const handleProvinceChange = (e: ChangeEvent<HTMLSelectElement>) => {
+  const handleProvinceChange = (e: any) => {
     const provinceId = e.target.value;
     setSelectedProvince(provinceId);
 
@@ -44,7 +44,7 @@ function App() {
       .catch((error) => console.log(error));
   };
 
-  const handleCityChange = (e: ChangeEvent<HTMLSelectElement>) => {
+  const handleCityChange = (e: any) => {
     const cityId = e.target.value;
     setSelectedCity(cityId);
 
@@ -57,7 +57,7 @@ function App() {
       .catch((error) => console.log(error));
   };
 
-  const handleDistricChange = (e: ChangeEvent<HTMLSelectElement>) => {
+  const handleDistricChange = (e: any) => {
     const districId = e.target.value;
     setSelectedDistric(districId);
   };
