@@ -3,18 +3,28 @@ import axios from "axios";
 import Form from "react-bootstrap/Form";
 import { Container } from "react-bootstrap";
 
-interface Data {
-  id: string;
-  name: string;
-}
-
 function App() {
-  const [provinces, setProvinces] = useState<Data[]>([]);
-  const [selectedProvince, setSelectedProvince] = useState<string>("");
-  const [cities, setCities] = useState<Data[]>([]);
-  const [selectedCity, setSelectedCity] = useState<string>("");
-  const [districts, setDistricts] = useState<Data[]>([]);
-  const [selectedDistric, setSelectedDistric] = useState<string>("");
+  const [provinces, setProvinces] = useState([
+    {
+      id: "",
+      name: "",
+    },
+  ]);
+  const [selectedProvince, setSelectedProvince] = useState("");
+  const [cities, setCities] = useState([
+    {
+      id: "",
+      name: "",
+    },
+  ]);
+  const [selectedCity, setSelectedCity] = useState("");
+  const [districts, setDistricts] = useState([
+    {
+      id: "",
+      name: "",
+    },
+  ]);
+  const [selectedDistric, setSelectedDistric] = useState("");
 
   useEffect(() => {
     const fetcData = async () => {
